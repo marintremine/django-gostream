@@ -1,0 +1,90 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  	<meta name="theme-color" content="#222222">
+  	<meta name="author" content="Extrayer">
+  	<meta name="description" content="Une WebTV pas comme les autres !">
+  	<meta property="og:type" content="website">
+  	<meta property="og:title" content="GOSTREAM">
+  	<meta property="og:description" content="Une WebTV pas comme les autres !">
+  	<meta property="og:url" content="https://gostream.fr">
+
+	<title>GoStream</title>
+	<link rel="icon" type="image/png" href="{% static 'img/logo.png' %}">
+
+	<link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/footer.css' %}">
+
+	
+
+	<script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+	
+
+	{% block head %}
+	{% endblock %}	
+</head>
+<body>
+
+		<nav>
+
+			<div class="logo-container">
+				<img class = "logo-image" alt="logo" src="{% static 'img/logo_text.png' %}">
+			</div>
+
+			<ul>
+				<li><a href="/">Accueil</a></li>
+				<li><a href="/programmation">Programmation</a></li>
+				<li><a href="/equipe">Equipe</a></li>
+				<li><a href="/partenaire">Partenaires</a></li>
+
+				<div class="social">
+	            	<li class="nav-item"><a class="nav-link px-2"  target="_blank" href="https://twitter.com/GoStreamFR"><i class="fab fa-twitter"></i></a></li>
+					<li class="nav-item"><a class="nav-link px-2"  target="_blank" href="https://www.twitch.tv/gostreamfr"><i class="fab fa-twitch"></i></a></li>
+	            	<li class="nav-item"><a class="nav-link px-2"  target="_blank" href="https://www.youtube.com/channel/UCjy8quB3X53C8zc5s1UY1VQ"><i class="fab fa-youtube"></i></a></li>
+	            	<li class="nav-item"><a class="nav-link px-2"  target="_blank" href="https://www.instagram.com/gostreamfr/"><i class="fab fa-instagram"></i></a></li>
+	            	<li class="nav-item"><a class="nav-link px-2"  target="_blank" href="https://discord.gg/EkkQRgr"><i class="fab fa-discord"></i></a></li>
+	            	<li class="nav-item"><a class="nav-link px-2"  target="_blank" href="mailto:gostreamcontact@gmail.com"><i class="fas fa-envelope"></i></a></li>
+        		</div>
+			</ul>
+
+			<button type="button" class="btn-hamburger" data-action="nav-toggle">
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+				<span></span>
+			</button>
+	
+  		</nav>
+
+  		
+        {% block content %}
+
+        {% endblock %}
+  		
+
+		<footer>
+			<h3>GoStream.fr - 2022 © tous droits réservés</h3>
+			<h4><a href="/mention">MENTIONS LÉGALES</a> - <a href="/candidature">CANDIDATURE</a></h4>
+  		</footer>
+  	
+		<script type="text/javascript">
+			let nav = document.querySelector('nav');
+			let navToggle = nav.querySelector("[data-action='nav-toggle']");
+
+
+			navToggle.addEventListener('click', () => {
+				if (nav.classList.contains('opened')) {
+					nav.classList.remove('opened');
+				} else {
+					nav.classList.add('opened');
+				}
+			})
+		</script>
+</body>
+
+</html>

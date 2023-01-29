@@ -1,0 +1,103 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/equipe/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<content>
+    <div class="titre">
+        <hr class="bar-left" color=#F03C3C>
+        <h1>LES STREAMERS</h1>
+        <hr class="bar-right" color=#F03C3C>
+    </div>
+
+    <div class="container">
+        {% for streamer in streamers %}
+        <div class="card">
+            <hr class="bar-top" color=#F03C3C>
+            <div class="box">
+                <div class="percent" style=" background-image: url({{ streamer.pp.url }});background-size: 100%;">
+                    <svg>
+                        <circle cx = "70" cy = "70" r="70"></circle>
+                        <circle cx = "70" cy = "70" r="70"></circle>
+                    </svg>
+                </div>
+                <h2 class="text">{{ streamer.name }}</h2>
+                <div>
+                    {% if streamer.twitch %}
+                    <a target="_blank" href="{{ streamer.twitch }}"><i id="icon" class="fab fa-twitch"></i></a>
+                    {% endif %}
+                    {% if streamer.twitter %}
+                    <a target="_blank" href="{{ streamer.twitter }}"><i id="icon" class="fab fa-twitter"></i></a>
+                    {% endif %}
+                    {% if streamer.youtube %}
+                    <a target="_blank" href="{{ streamer.youtube }}"><i id="icon" class="fab fa-youtube"></i></a>
+                    {% endif %}
+                    {% if streamer.instagram %}
+                    <a target="_blank" href="{{ streamer.instagram }}"><i id="icon" class="fab fa-instagram"></i></a>
+                    {% endif %}
+                    {% if streamer.tiktok %}
+                    <a target="_blank" href="{{ streamer.tiktok }}"><i id="icon" class="fab fa-tiktok"></i></a>
+                    {% endif %}
+                    {% if streamer.other %}
+                    <a target="_blank" href="{{ streamer.other }}"><i id="icon" class="fa fa-link"></i></a>
+                    {% endif %}
+                </div>
+            </div>
+            <hr class="bar-bot" color=#F03C3C>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="titre">
+        <hr class="bar-left" color=#F03C3C>
+        <h1>LE STAFF</h1>
+        <hr class="bar-right" color=#F03C3C>
+    </div>
+
+    <div class="container">
+        {% for equipe in equipes %}
+        <div class="card">
+            <hr class="bar-top" color=#F03C3C>
+            <div class="box">
+                <div class="percent" style=" background-image: url({{ equipe.pp.url }});background-size: 100%;">
+                    <svg>
+                        <circle cx = "70" cy = "70" r="70"></circle>
+
+                        <circle cx = "70" cy = "70" r="70"></circle>
+                    </svg>
+                </div>
+                <h2 class="text">{{ equipe.name }}</h2>
+                <h1 class="role">{{ equipe.role }}</h1>
+                <div>
+                    {% if equipe.twitch %}
+                    <a target="_blank" href="{{ equipe.twitch }}"><i id="icon" class="fab fa-twitch"></i></a>
+                    {% endif %}
+                    {% if equipe.twitter %}
+                    <a target="_blank" href="{{ equipe.twitter }}"><i id="icon" class="fab fa-twitter"></i></a>
+                    {% endif %}
+                    {% if equipe.youtube %}
+                    <a target="_blank" href="{{ equipe.youtube }}"><i id="icon" class="fab fa-youtube"></i></a>
+                    {% endif %}
+                    {% if equipe.instagram %}
+                    <a target="_blank" href="{{ equipe.instagram }}"><i id="icon" class="fab fa-instagram"></i></a>
+                    {% endif %}
+                    {% if equipe.tiktok %}
+                    <a target="_blank" href="{{ equipe.tiktok }}"><i id="icon" class="fab fa-tiktok"></i></a>
+                    {% endif %}
+                    {% if equipe.other %}
+                    <a target="_blank" href="{{ equipe.other }}"><i id="icon" class="fa fa-link"></i></a>
+                    {% endif %}
+                </div>
+            </div>
+            <hr class="bar-bot" color=#F03C3C>
+        </div>
+        {% endfor %}
+
+
+    </div>
+</content>
+
+{% endblock %}

@@ -1,0 +1,170 @@
+@font-face {
+    font-family: 'Klavika';
+    src: url('Klavika_Bold.otf');
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Klavika';
+}
+
+body{
+  background-color: #222;
+}
+
+content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px; /*saut du menu*/
+  }
+  
+  content .main{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  
+  }
+  
+  content .main .flex-top{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  content .main .flex-top .stream{
+    width: 75%;
+    height: calc(85vh - 90px);
+  
+    display: flex;
+    flex-direction: column;
+  }
+  
+  content .main .flex-top .stream header{
+    width: 100%;
+    height: 10%;
+  
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  content .main .flex-top .stream header h1{
+    color: #fff;
+    font-size: 1.3em;
+  }
+  
+  content .main .flex-top .stream header h1 span{
+    color: #F03C3C;
+    font-size: 0.9em;
+  }
+  
+  
+  content .main .flex-top .stream article{
+    width: 100%;
+    height: 90%;
+  }
+  
+  
+  
+  
+  content .main .flex-top .chat{
+    width: 20%;
+    height: calc(85vh - 90px);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  content .main .flex-top .chat header{
+    width: 100%;
+    height: 10%;
+  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  content .main .flex-top .chat header h1{
+    color: #fff;
+    font-size: 1.3em;
+    text-align: center;
+  }
+  
+  content .main .flex-top .chat article{
+    width: 100%;
+    height: 90%;
+  }
+  
+  .flex-bottom{
+    width: 100%;
+  }
+  
+  .flex-bottom aside{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    min-height: 10vh;
+  
+  }
+  
+  .flex-bottom aside button{
+    background-color: #000000; 
+    border: solid 1px #F03C3C;
+    color: #fff;
+    padding: 1em 6em;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  
+  }
+  
+  
+  @media screen and (max-width: 1188px) {
+    content .main{
+      width: 100%;
+    }
+    content .main .flex-top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    }
+  
+  
+    content .main .flex-top .stream{
+      width: 100%;
+      height: 30vh;
+    }
+  
+    content .main .flex-top .stream header{
+      display: none;
+    }
+  
+    content .main .flex-top .stream article {
+      height: 100%;
+    }
+  
+    content .main .flex-top .chat{
+      width: 100%;
+      height: calc(70vh - 90px);
+    }
+  
+    content .main .flex-top .chat header {
+      display: none;
+    }
+  
+    content .main .flex-top .chat article {
+      height: 100%;
+    }
+  
+  
+    .flex-bottom aside button{
+      margin-top: 1em;
+      margin-bottom: 1em;
+    }
+  
+  }

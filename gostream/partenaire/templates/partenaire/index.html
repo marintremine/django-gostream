@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+    
+{% block head %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/partenaire/index.css' %}">
+{% endblock %}
+
+{% block content %}
+  		<content>
+  			<div class="titre">
+				<hr class="bar-left" color=#F03C3C>
+				<h1>LES PARTENAIRES</h1>
+				<hr class="bar-right" color=#F03C3C>
+			</div>
+
+			<div class="container">
+				{% for partenaire in partenaires %}
+				<div class="card">
+					<hr class="bar-top" color=#F03C3C>
+					<div class="box">
+                		<div class="percent" style=" background-image: url({{ partenaire.pp.url }});background-size: 100%;">
+		                    <svg>
+		                        <circle cx = "70" cy = "70" r="70"></circle>
+		                        <circle cx = "70" cy = "70" r="70"></circle>
+		                    </svg>
+                		</div>
+                		<div class="partenaires">
+                			<h2 class="name">{{ partenaire.name }}</h2>
+                			<p class="description">{{ partenaire.description }}</p>
+                		</div>
+                	</div>
+                	<hr class="bar-bot" color=#F03C3C>
+				</div>
+				{% endfor %}
+
+			</div>
+
+  		</content>
+{% endblock %}

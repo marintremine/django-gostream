@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block head %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/accueil/index.css' %}">
+{% endblock %}
+
+{% block content %}
+<content>
+    <div class="main">
+        <div class="flex-top">					
+            <section class="stream">
+                <header>
+                    <h1>{{ title }} - <span>{{ game_name }}</span></h1>
+                    <h1>{{ viewer_count }} <span>Spectateurs</span></h1>
+                </header>
+                <article>
+                    <iframe src="https://player.twitch.tv/?channel=otplol_&parent=gostream.fr" frameborder="0" allowfullscreen="true" scrolling="no" height="100%" width="100%"></iframe>
+                </article>
+            </section>
+            <section class="chat">
+                <header>
+                    <h1>DISCUSSION</h1>
+                </header>
+                <article>
+                    <iframe src="https://www.twitch.tv/embed/otplol_/chat?parent=gostream.fr" height="100%" width="100%"></iframe>
+                </article>
+            </section>
+        </div>
+    </div>
+    <div class="flex-bottom">
+        <aside>
+            <button>???</button>
+            <button>???</button>
+            <button>???</button>
+            <button>???</button>
+        </aside>
+    </div>
+</content>
+{% endblock %}
