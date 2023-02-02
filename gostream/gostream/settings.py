@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-0a+kvqz57o*6b)a7+qawx7-u7ie#g5l&0jtx11%uo#qf_3k@xa
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['https://gostreamfr.pythonanywhere.com/','127.0.0.1']
+ALLOWED_HOSTS = ['gostreamfr.pythonanywhere.com','127.0.0.1']
 
 
 # Application definition
@@ -125,10 +125,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
-STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = "static/"
+STATIC_ROOT = "/home/GoStreamFR/django-gostream/gostream/static"
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    '/home/GoStreamFR/django-gostream/gostream/',
 ]
 print(BASE_DIR / 'static')
 
