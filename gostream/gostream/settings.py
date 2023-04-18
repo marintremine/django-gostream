@@ -126,9 +126,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = "/home/GoStreamFR/django-gostream/gostream/static"
+STATIC_ROOT = BASE_DIR 
 STATICFILES_DIRS = [
-    '/home/GoStreamFR/django-gostream/gostream/',
+    BASE_DIR / 'static'
 ]
 print(BASE_DIR / 'static')
 
