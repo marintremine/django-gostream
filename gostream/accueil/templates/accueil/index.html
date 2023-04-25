@@ -11,8 +11,14 @@
         <div class="flex-top">
             <section class="stream">
                 <header>
-                    <h1>{{ title }} - <span>{{ game_name }}</span></h1>
-                    <h1>{{ viewer_count }} <span>Spectateurs</span></h1>
+                    <div class="left">
+                        <h1>{{ title }}</h1>
+                        <h2>{{ game_name }}</h2>
+                    </div>
+                    <div class="right">
+                        <h1>{{ viewer_count }}</h1>
+                        <h2>Spectateurs</h2>
+                    </div>
                 </header>
                 <article>
                     <iframe src="https://player.twitch.tv/?channel=gostreamfr&parent=gostreamfr.pythonanywhere.com" frameborder="0" allowfullscreen="true" scrolling="no" height="100%" width="100%"></iframe>
@@ -20,21 +26,37 @@
             </section>
             <section class="chat">
                 <header>
-                    <h1>DISCUSSION</h1>
+                    <h1>TCHAT TWITCH</h1>
                 </header>
                 <article>
                     <iframe src="https://www.twitch.tv/embed/gostreamfr/chat?parent=gostreamfr.pythonanywhere.com" height="100%" width="100%"></iframe>
                 </article>
             </section>
         </div>
+        
+        <div class="flex-bottom">
+            <section class="streamers">
+                {% for streamer in streamers %}
+                <div class="streamer" onclick="window.location.href = '{{ streamer.twitch }}'">
+                    <h3>{{ streamer.nom }}</h3>
+                    {% if streamer.online %}
+                        <div class="cercle" style="border-color: #F03C3C ;background-image: url(../../../media/{{ streamer.pp }});background-size: 100%;"></div>
+                        <div class="direct" style="background-color: #F03C3C;"><h4>EN DIRECT</h4></div>
+                    {% else %}
+                        <div class="cercle" style=" background-image: url(../../../media/{{ streamer.pp }});background-size: 100%;"></div>
+                        <div class="direct" style="background-color: #111111;"><h4>HORS LIGNE</h4></div>
+                    {% endif %}
+                </div>
+                {% endfor %}
+            </section>
+            
+            <section class="boutons">
+                <button id="abonne" class="bouton">S'ABONNER</button>
+                <button id="donation" class="bouton">DONATION</button>
+                <button id="discord" class="bouton">DISCORD</button>
+            </section>
+        </div>
     </div>
-    <div class="flex-bottom">
-        <aside>
-            <button>???</button>
-            <button>???</button>
-            <button>???</button>
-            <button>???</button>
-        </aside>
-    </div>
+
 </content>
 {% endblock %}

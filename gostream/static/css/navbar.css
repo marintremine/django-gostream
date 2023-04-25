@@ -19,7 +19,7 @@ nav
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #000;
+  background: #111111;
   z-index: 1000;
 
   border-bottom: solid 2px #F03C3C;
@@ -35,6 +35,11 @@ nav ul{
   display: flex;
 }
 
+nav ul .menu{
+  display: flex;
+  align-items: center;
+}
+
 nav ul li{
   position: relative;
   list-style: none;
@@ -43,13 +48,16 @@ nav ul li{
 
 nav ul li a{
   position: relative;
-  padding: 5px 10px;
   color: #fff;
   display: inline-block;
   text-decoration: none;
   cursor: pointer;
+}
+
+nav ul .menu li a{
   border: 1px #F03C3C solid;
   border-radius: 25px;
+  padding: 5px 10px;
 }
 
 nav ul li a:hover
@@ -61,12 +69,28 @@ nav ul .social{
   position: relative;
   list-style: none;
   text-decoration: none;
-
+  padding: 5px;
   margin-left: 25px;
   border: 1px #F03C3C solid;
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
   flex-direction: row;
+}
+
+nav ul .social .col1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 80px;
+}
+
+nav ul .social .barre{
+  border-left: 1px solid #F03C3C;
+}
+
+nav ul .social .col2{
+  display: flex;
+  flex-wrap: wrap;
+  width: 25px;
 }
 
 nav ul .social li{
@@ -150,13 +174,34 @@ nav.opened .btn-hamburger span:nth-child(3) {
     align-items: center;
     transition: bottom .5s ease-in-out;
     overflow: hidden;
-    background: #000000;
+    background: #111111;
     border-bottom: solid 2px #F03C3C;
+  }
+
+  nav ul .menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   nav ul .social{
     margin: 0;
+    border: none;
   }
+
+  nav ul .social .col1{
+    flex-direction: row;
+    width: auto;
+  }
+  nav ul .social .barre{
+    display: none;
+  }
+  nav ul .social .col2{
+    flex-direction: row;
+    width: auto;
+  }
+
+
 
   nav.opened ul{
     transition: bottom .5s ease-in-out;

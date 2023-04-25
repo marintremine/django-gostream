@@ -25,12 +25,13 @@ content{
     display: flex;
     flex-direction: column;
     width: 90%;
-  
   }
   
   content .main .flex-top{
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    min-height: calc(  95vh - 90px);
   }
   
   content .main .flex-top .stream{
@@ -39,27 +40,39 @@ content{
   
     display: flex;
     flex-direction: column;
+    border: 1px solid #F03C3C;
   }
   
   content .main .flex-top .stream header{
+    padding: 10px;
     width: 100%;
     height: 10%;
   
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    background: #111111;
+    border-bottom: 1px solid #F03C3C;
   }
+  content .main .flex-top .stream header .right{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid #F03C3C;
+    padding-left: 8px;
+  }
+  
   
   content .main .flex-top .stream header h1{
     color: #fff;
     font-size: 1.3em;
   }
   
-  content .main .flex-top .stream header h1 span{
+  content .main .flex-top .stream header h2{
     color: #F03C3C;
     font-size: 0.9em;
   }
-  
   
   content .main .flex-top .stream article{
     width: 100%;
@@ -74,6 +87,7 @@ content{
     height: calc(85vh - 90px);
     display: flex;
     flex-direction: column;
+    border: 1px solid #F03C3C;
   }
   
   
@@ -84,6 +98,8 @@ content{
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #111111;
+    border-bottom: 1px solid #F03C3C;
   }
   
   content .main .flex-top .chat header h1{
@@ -98,31 +114,86 @@ content{
   }
   
   .flex-bottom{
-    width: 100%;
-  }
-  
-  .flex-bottom aside{
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-    min-height: 10vh;
-  
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 20px;
   }
-  
-  .flex-bottom aside button{
-    background-color: #000000; 
-    border: solid 1px #F03C3C;
+
+  .flex-bottom .streamers{
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+  }
+
+  .flex-bottom .streamers .streamer{
+    display: flex;
+    flex-direction: column;
+    align-items : center;
+    margin: 10px;
+  }
+
+  .flex-bottom .streamers .streamer h3{
     color: #fff;
-    padding: 1em 6em;
+    font-size: 0.9em;
+    
+  }
+
+  .flex-bottom .streamers .streamer .cercle{
+    background: #222;
+    border-radius:50%;
+    width:96px;
+    height:96px;
+    border:3px solid #FFFFFF; 
+  }
+
+  .flex-bottom .streamers .streamer .direct{
+    border: 1px #fff solid;
+    
+    border-radius: 10px;
+    width: 75%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-10px);
+  }
+  .flex-bottom .streamers .streamer .direct h4{
+    color: #fff;
+    font-size: 0.7em;
+  }
+
+  .flex-bottom .boutons{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .flex-bottom .boutons .bouton{
+    border: 1px solid #fff;
+    color: white;
+    padding: 15px 32px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
-  
+    font-size: 24px;
+    cursor: pointer;
+    margin: 10px;
   }
-  
-  
+
+  #abonne{
+    background-color: rgb(158, 17, 252);
+    
+  }
+
+  #donation{
+    background-color: rgb(16, 168, 206);
+  }
+
+  #discord{
+    background-color: #7289da;
+  }
+
   @media screen and (max-width: 1188px) {
     content .main{
       width: 100%;
@@ -138,6 +209,7 @@ content{
     content .main .flex-top .stream{
       width: 100%;
       height: 30vh;
+      border: none;
     }
   
     content .main .flex-top .stream header{
@@ -149,6 +221,7 @@ content{
     }
   
     content .main .flex-top .chat{
+      border: none;
       width: 100%;
       height: calc(70vh - 90px);
     }
@@ -160,12 +233,23 @@ content{
     content .main .flex-top .chat article {
       height: 100%;
     }
-  
-  
-    .flex-bottom aside button{
-      margin-top: 1em;
-      margin-bottom: 1em;
+
+    content .main .flex-bottom{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
     }
+
+    content .main .flex-bottom .streamers{
+      justify-content: center;
+      width: 100%;
+    }
+
+    content .main .flex-bottom .boutons{
+      width: 100%;
+    }
+  
   
   }
 
