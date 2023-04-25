@@ -16,17 +16,23 @@
 			<div class="container">
 				{% for partenaire in partenaires %}
 				<div class="card">
-					<div class="box-right">
-						<div class="circle"></div>
-					</div>
 					<div class="box-left">
+						<div class="circle" style="background-image: url({{ partenaire.pp.url }});background-size: 100%;"></div>
+					</div>
+					<div class="box-right">
 						<div class="top">
-							<h2>NOM DU PARTENAIRE</h2>
-							<div class="social"></div>
+							<h2>{{ partenaire.name }}</h2>
+							<ul class="social">
+								<li><a class="nav-link px-2"  target="_blank" href=""><i class="fab fa-twitch"></i></a></li>
+								<li><a class="nav-link px-2"  target="_blank" href=""><i class="fab fa-twitter"></i></a></li>
+								<li><a class="nav-link px-2"  target="_blank" href=""><i class="fab fa-instagram"></i></a></li>
+								<li><a class="nav-link px-2"  target="_blank" href=""><i class="fab fa-tiktok"></i></a></li>
+								<li><a class="nav-link px-2"  target="_blank" href=""><i class="fab fa-youtube"></i></a></li>
+								<li><a class="nav-link px-2"  target="_blank" href=""><i class="fab fa-discord"></i></a></li>
+							</ul>
 						</div>
 						<div class="bottom">
-							<h3>Description du partenaire..</h3>
-							<p>--------------------------------------------------------------------------------------------------------------------------------------------</p>
+							<p>{{ partenaire.description }}</p>
 						</div>
 					</div>
 				</div>
