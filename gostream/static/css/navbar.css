@@ -205,7 +205,7 @@ nav.opened .btn-hamburger span:nth-child(3) {
 
   nav.opened ul{
     transition: bottom .5s ease-in-out;
-    bottom: calc(100vh - 25em);
+    bottom: calc(100vh - 320px);
   }
 
   nav ul li a
