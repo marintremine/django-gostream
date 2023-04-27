@@ -16,37 +16,48 @@
     <div class="container">
         {% for streamer in streamers %}
         <div class="card">
-            <hr class="bar-top" color=#F03C3C>
+            <div class="title" style="background-color: {{streamer.color}} ;">
+                <h2>{{ streamer.name }}</h2>
+            </div>
             <div class="box">
-                <div class="percent" style=" background-image: url({{ streamer.pp.url }});background-size: 100%;">
-                    <svg>
-                        <circle cx = "70" cy = "70" r="70"></circle>
-                        <circle cx = "70" cy = "70" r="70"></circle>
-                    </svg>
-                </div>
-                <h2 class="text">{{ streamer.name }}</h2>
-                <div>
-                    {% if streamer.twitch %}
-                    <a target="_blank" href="{{ streamer.twitch }}"><i id="icon" class="fab fa-twitch"></i></a>
-                    {% endif %}
-                    {% if streamer.twitter %}
-                    <a target="_blank" href="{{ streamer.twitter }}"><i id="icon" class="fab fa-twitter"></i></a>
-                    {% endif %}
-                    {% if streamer.youtube %}
-                    <a target="_blank" href="{{ streamer.youtube }}"><i id="icon" class="fab fa-youtube"></i></a>
-                    {% endif %}
-                    {% if streamer.instagram %}
-                    <a target="_blank" href="{{ streamer.instagram }}"><i id="icon" class="fab fa-instagram"></i></a>
-                    {% endif %}
-                    {% if streamer.tiktok %}
-                    <a target="_blank" href="{{ streamer.tiktok }}"><i id="icon" class="fab fa-tiktok"></i></a>
-                    {% endif %}
-                    {% if streamer.other %}
-                    <a target="_blank" href="{{ streamer.other }}"><i id="icon" class="fa fa-link"></i></a>
-                    {% endif %}
+                <div class="circle" style="background-image: url({{ streamer.pp.url }});background-size: 100%;"></div>
+                <div class="right">
+                    <div class="box-skill">
+                        <div class="skill">
+                            <h3>{{ streamer.skill1 }}</h3>
+                            <h4 style="color: {{streamer.color}} ;">{{ streamer.pourcent1 }}</h4>
+                        </div>
+                        <div class="skill">
+                            <h3>{{ streamer.skill2 }}</h3>
+                            <h4 style="color: {{streamer.color}} ;">{{ streamer.pourcent2 }}</h4>
+                        </div>
+                        <div class="skill">
+                            <h3>{{ streamer.skill3 }}</h3>
+                            <h4 style="color: {{streamer.color}} ;">{{ streamer.pourcent3 }}</h4>
+                        </div>
+                    </div>
+                    <div class="social">
+                        {% if streamer.twitch %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.twitch }}"><i class="fab fa-twitch"></i></a></li>
+                        {% endif %}
+                        {% if streamer.twitter %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.twitter }}"><i class="fab fa-twitter"></i></a></li>
+                        {% endif %}
+                        {% if streamer.instagram %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.instagram }}"><i class="fab fa-instagram"></i></a></li>
+                        {% endif %}
+                        {% if streamer.tiktok %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.tiktok }}"><i class="fab fa-tiktok"></i></a></li>
+                        {% endif %}
+                        {% if streamer.youtube %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.youtube }}"><i class="fab fa-youtube"></i></a></li>
+                        {% endif %}
+                        {% if streamer.discord %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.discord }}"><i class="fab fa-discord"></i></a></li>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-            <hr class="bar-bot" color=#F03C3C>
         </div>
         {% endfor %}
     </div>
@@ -60,43 +71,51 @@
     <div class="container">
         {% for equipe in equipes %}
         <div class="card">
-            <hr class="bar-top" color=#F03C3C>
+            <div class="title" style="background-color: {{equipe.color}} ;">
+                <h2>{{ equipe.name }}</h2>
+                <h4>{{ equipe.role }}</h4>
+            </div>
             <div class="box">
-                <div class="percent" style=" background-image: url({{ equipe.pp.url }});background-size: 100%;">
-                    <svg>
-                        <circle cx = "70" cy = "70" r="70"></circle>
-
-                        <circle cx = "70" cy = "70" r="70"></circle>
-                    </svg>
-                </div>
-                <h2 class="text">{{ equipe.name }}</h2>
-                <h1 class="role">{{ equipe.role }}</h1>
-                <div>
-                    {% if equipe.twitch %}
-                    <a target="_blank" href="{{ equipe.twitch }}"><i id="icon" class="fab fa-twitch"></i></a>
-                    {% endif %}
-                    {% if equipe.twitter %}
-                    <a target="_blank" href="{{ equipe.twitter }}"><i id="icon" class="fab fa-twitter"></i></a>
-                    {% endif %}
-                    {% if equipe.youtube %}
-                    <a target="_blank" href="{{ equipe.youtube }}"><i id="icon" class="fab fa-youtube"></i></a>
-                    {% endif %}
-                    {% if equipe.instagram %}
-                    <a target="_blank" href="{{ equipe.instagram }}"><i id="icon" class="fab fa-instagram"></i></a>
-                    {% endif %}
-                    {% if equipe.tiktok %}
-                    <a target="_blank" href="{{ equipe.tiktok }}"><i id="icon" class="fab fa-tiktok"></i></a>
-                    {% endif %}
-                    {% if equipe.other %}
-                    <a target="_blank" href="{{ equipe.other }}"><i id="icon" class="fa fa-link"></i></a>
-                    {% endif %}
+                <div class="circle" style="background-image: url({{ equipe.pp.url }});background-size: 100%;"></div>
+                <div class="right">
+                    <div class="box-skill">
+                        <div class="skill">
+                            <h3>{{ equipe.skill1 }}</h3>
+                            <h4 style="color: {{equipe.color}} ;">{{ equipe.pourcent1 }}</h4>
+                        </div>
+                        <div class="skill">
+                            <h3>{{ equipe.skill2 }}</h3>
+                            <h4 style="color: {{equipe.color}} ;">{{ equipe.pourcent2 }}</h4>
+                        </div>
+                        <div class="skill">
+                            <h3>{{ equipe.skill3 }}</h3>
+                            <h4 style="color: {{equipe.color}} ;">{{ equipe.pourcent3 }}</h4>
+                        </div>
+                    </div>
+                    <div class="social">
+                        {% if equipe.twitch %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ equipe.twitch }}"><i class="fab fa-twitch"></i></a></li>
+                        {% endif %}
+                        {% if equipe.twitter %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ equipe.twitter }}"><i class="fab fa-twitter"></i></a></li>
+                        {% endif %}
+                        {% if equipe.instagram %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ equipe.instagram }}"><i class="fab fa-instagram"></i></a></li>
+                        {% endif %}
+                        {% if equipe.tiktok %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ equipe.tiktok }}"><i class="fab fa-tiktok"></i></a></li>
+                        {% endif %}
+                        {% if equipe.youtube %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ equipe.youtube }}"><i class="fab fa-youtube"></i></a></li>
+                        {% endif %}
+                        {% if equipe.discord %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ equipe.discord }}"><i class="fab fa-discord"></i></a></li>
+                        {% endif %}
+                    </div>
                 </div>
             </div>
-            <hr class="bar-bot" color=#F03C3C>
         </div>
         {% endfor %}
-
-
     </div>
 </content>
 
