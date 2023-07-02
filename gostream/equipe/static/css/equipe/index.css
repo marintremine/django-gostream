@@ -99,6 +99,7 @@ content{
 .container .card .box .right{
   margin: 1em;
   margin-left: 0;
+  width: 333px;
 }
 
 .container .card .box .right .box-skill{
