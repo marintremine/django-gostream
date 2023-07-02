@@ -6,6 +6,6 @@ from equipe.models import Equipe, Streamer
 
 
 def equipe(request):
-    streamers = Streamer.objects.all()
-    equipes = Equipe.objects.all()
+    streamers = Streamer.objects.order_by("name")
+    equipes = Equipe.objects.order_by("name")
     return render(request,'equipe/index.html', context={'streamers':streamers,'equipes':equipes})

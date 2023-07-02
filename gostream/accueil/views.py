@@ -5,7 +5,7 @@ from equipe.models import Streamer
 
 # Create your views here.
 def accueil(request):
-    streamers = Streamer.objects.all()
+    streamers = Streamer.objects.order_by("name")
     
     liste_chaine_twitch = ['gostreamfr']
     for streamer in streamers.values():
