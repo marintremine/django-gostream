@@ -28,6 +28,7 @@ class Streamer(models.Model):
 class Equipe(models.Model):
     name = models.CharField(max_length=64)
     role = models.CharField(max_length=128)
+    ordre = models.IntegerField()
 
     twitch = models.CharField(max_length=256,blank = True)
     youtube = models.CharField(max_length=256,blank = True)

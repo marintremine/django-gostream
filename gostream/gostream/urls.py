@@ -24,6 +24,7 @@ from mention.views import mention
 from candidature.views import candidature
 from programmation.views import programmation
 from partenaire.views import partenaire
+from emissions.views import emissions
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,5 +33,6 @@ urlpatterns = [
     path('equipe/', equipe, name='equipe'),
     path('partenaire/', partenaire, name='partenaire'),
     path('candidature/', candidature, name ='candidature'),
+    path('emissions/', emissions, name ='emissions'),
     path('mention/', mention, name='mention'),
 ] + static(settings.MEDIA_URL,document_root=settings.MEDIA_ROOT)

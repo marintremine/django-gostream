@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'mention',
     'accueil',
     'candidature',
+    'emissions',
 ]
 
 MIDDLEWARE = [
