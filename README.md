@@ -1,1 +1,1 @@
-# django-gostream
+https://gostreamfr.pythonanywhere.com/
