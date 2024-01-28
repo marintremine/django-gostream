@@ -11,14 +11,14 @@
 }
 
 body{
-  background-color: #222;
+  background-color: #111;
 }
 
 content{
   display: flex;
   flex-direction: column;
   padding-top: 90px;
-  background-color: #222;
+  background-color: #111;
   min-height: 95vh;
 }
 
@@ -62,11 +62,17 @@ content{
 
 .container .card{
   margin: 2em;
-  background: #111;
+  background:  #333333;
   border-radius: 10px;
   border: 2px #F03C3C solid;
   display: flex;
   flex-direction: column;
+  transition: 0.5s;
+}
+
+.container .card:hover{
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0,0,0,.5);
 }
 
 

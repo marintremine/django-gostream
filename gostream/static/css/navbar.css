@@ -19,7 +19,7 @@ nav
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #111111;
+  background: #000000;
   z-index: 1000;
 
   border-bottom: solid 2px #F03C3C;

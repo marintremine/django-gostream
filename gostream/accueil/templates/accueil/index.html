@@ -15,10 +15,14 @@
                         <h1>{{ title }}</h1>
                         <h2>{{ game_name }}</h2>
                     </div>
+                    {% if viewer_count != "∞" %}
                     <div class="right">
-                        <h1>{{ viewer_count }}</h1>
-                        <h2>Spectateurs</h2>
+                        
+                            <h1>{{ viewer_count }}</h1>
+                            <h2>Spectateurs</h2>
+                        
                     </div>
+                    {% endif %}
                 </header>
                 <article>
                     <iframe src="https://player.twitch.tv/?channel=gostreamfr&parent=gostreamfr.pythonanywhere.com" frameborder="0" allowfullscreen="true" scrolling="no" height="100%" width="100%"></iframe>
@@ -50,11 +54,7 @@
                 {% endfor %}
             </section>
             
-            <section class="boutons">
-                <button id="abonne" class="bouton">S'ABONNER</button>
-                <button id="donation" class="bouton">DONATION</button>
-                <button id="discord" class="bouton">DISCORD</button>
-            </section>
+
         </div>
     </div>
 

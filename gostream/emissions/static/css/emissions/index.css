@@ -11,7 +11,7 @@
 }
 
 body{
-  background-color: #222;
+  background-color: #111;
 }
 
 content{
@@ -62,12 +62,20 @@ content{
   .container .card{
     width: 50em;
     margin: 2em;
-    background: #111;
+    background: #333333;
     border-radius: 10px;
     border: 2px #F03C3C solid;
     display: flex;
     justify-content: flex-start;
+    transition: 0.5s;
   }
+
+  .container .card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0,0,0,.5);
+  }
+  
+  
   
   .container .card .box-left{
     display: flex;

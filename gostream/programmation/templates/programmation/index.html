@@ -15,66 +15,12 @@
             <hr class="bar-right" color=#F03C3C>
         </div>
 
-        <div class="map-container">
-        <div class="inner-basic division-map div-toggle" data-target=".division-details" id="divisiondetail">
-
-            <button class="map-point-sm" data-show=".semaineactuelle" style="background:#F03C3C;">
-                <div class="content">
-                        <div class="centered-y">
-                        <p>SEMAINE ACTUELLE</p>
-                        </div>
-                </div>
-                </button>
-            
-            <button class="map-point-sm" data-show=".semaineprochaine">
-                <div class="content">
-                        <div class="centered-y">
-                        <p>SEMAINE PROCHAINE</p>
-                        </div>
-                </div>
-            </button>
-            
-            
-        </div>
-        </div>
-
-        <script>
-            $(document).on('click', '.map-point-sm', function() {
-                $(this).css('background-color', '#F03C3C').siblings().css('background-color', '#333333');
-                var show = $(this).data('show');
-                $(show).removeClass("hide").siblings().addClass("hide");
-
-            });
-        </script>
-        
-        
-        <div class="map-container">
-            <div class="inner-basic division-details">
-
-                <div class="semaineactuelle">
-                    <br>
-                    <div id="Iframe-Liason-Sheet" class="iframe-border center-block-horiz">
-                        <div class="responsive-wrapper responsive-wrapper-wxh-550x2000">
-                                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSVFO6K0xuqwqxgnuRa2ng6R0HkMq80U3GrlVQozp0_zwCZLUm5m1l5yUgUlorsfKVvbPwa1JTIwEEJ/pubhtml?gid=785633591&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false&amp;range=A1:I61"> 
-                        <p style="font-size: 110%;"><em><strong>ERROR: </strong>An iframe should be displayed here but your browser version does not support iframes.</em> Please update your browser to its most recent version and try again.</p>
-                                </iframe>
-                        </div>
-                    </div> 
-
-                    
-                    </div>
-                <div class="semaineprochaine hide">
-                    <br>
-                    <div id="Iframe-Liason-Sheet" class="iframe-border center-block-horiz">
-                        <div class="responsive-wrapper responsive-wrapper-wxh-550x2000">
-                                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSVFO6K0xuqwqxgnuRa2ng6R0HkMq80U3GrlVQozp0_zwCZLUm5m1l5yUgUlorsfKVvbPwa1JTIwEEJ/pubhtml?gid=1061390453&amp;single=true&amp;widget=false&amp;headers=false&amp;chrome=false&amp;range=A1:I61">
-                            <p style="font-size: 110%;"><em><strong>ERROR: </strong>An iframe should be displayed here but your browser version does not support iframes.</em> Please update your browser to its most recent version and try again.</p>
-                                </iframe>
-                        </div>
-                    </div> 
-
-                </div>
-                </div>
+        <div style="text-align: center;">
+            {%if not programme%}
+            <h2 style="color: #fff;">Il n'y a pas de programme pour le moment</h2>
+            {%else%}
+            <img src="{{ programme.image.url }}" width="80%" height="80%" alt="programmation">
+            {%endif%}
         </div>
     </section>
 </content>
