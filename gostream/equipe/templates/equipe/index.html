@@ -145,7 +145,7 @@
 
     <div class="container">
         {% for equipe in equipes %}
-        <div class="card">
+        <div class="card" style="border-color: {{equipe.color}} ;">
             <div class="title" style="background-color: {{equipe.color}} ;">
                 <h2>{{ equipe.name }}</h2>
                 <h4>{{ equipe.role }}</h4>
