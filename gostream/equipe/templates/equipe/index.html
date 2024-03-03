@@ -15,7 +15,7 @@
 
     <div class="container">
         {% for streamer in streamers %}
-        <div class="card">
+        <div class="card" style="border-color: {{streamer.color}} ;">
             <div class="title" style="background-color: {{streamer.color}} ;">
                 <h2>{{ streamer.name }}</h2>
             </div>
@@ -25,37 +25,112 @@
                     <div class="box-skill">
                         <div class="skill">
                             <h3>{{ streamer.skill1 }}</h3>
-                            <h4 style="color: {{streamer.color}} ;">{{ streamer.pourcent1 }}</h4>
+                            <h4 style="color: {{streamer.color}}">{{ streamer.pourcent1 }}</h4>
                         </div>
                         <div class="skill">
                             <h3>{{ streamer.skill2 }}</h3>
-                            <h4 style="color: {{streamer.color}} ;">{{ streamer.pourcent2 }}</h4>
+                            <h4 style="color: {{streamer.color}}">{{ streamer.pourcent2 }}</h4>
                         </div>
                         <div class="skill">
                             <h3>{{ streamer.skill3 }}</h3>
-                            <h4 style="color: {{streamer.color}} ;">{{ streamer.pourcent3 }}</h4>
+                            <h4 style="color: {{streamer.color}} ">{{ streamer.pourcent3 }}</h4>
                         </div>
                     </div>
-                    <div class="social">
+                    <style>
+                        .{{streamer.name}}{{streamer.id}} li a{
+                            color: white; 
+                        }
+
+                        .{{streamer.name}}{{streamer.id}} li a:hover{
+                            color: {{streamer.color}}; 
+                        }
+                    </style>
+                    <div class="social {{streamer.name}}{{streamer.id}}">
                         {% if streamer.twitch %}
-                        <li><a class="nav-link px-2" style="color: {{streamer.color}} ;" target="_blank" href="{{ streamer.twitch }}"><i class="fab fa-twitch"></i></a></li>
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.twitch }}"><i class="fab fa-twitch"></i></a></li>
                         {% endif %}
                         {% if streamer.twitter %}
-                        <li><a class="nav-link px-2" style="color: {{streamer.color}} ;" target="_blank" href="{{ streamer.twitter }}"><i class="fab fa-twitter"></i></a></li>
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.twitter }}"><i class="fab fa-twitter"></i></a></li>
                         {% endif %}
                         {% if streamer.instagram %}
-                        <li><a class="nav-link px-2" style="color: {{streamer.color}} ;" target="_blank" href="{{ streamer.instagram }}"><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.instagram }}"><i class="fab fa-instagram"></i></a></li>
                         {% endif %}
                         {% if streamer.tiktok %}
-                        <li><a class="nav-link px-2" style="color: {{streamer.color}} ;" target="_blank" href="{{ streamer.tiktok }}"><i class="fab fa-tiktok"></i></a></li>
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.tiktok }}"><i class="fab fa-tiktok"></i></a></li>
                         {% endif %}
                         {% if streamer.youtube %}
-                        <li><a class="nav-link px-2" style="color: {{streamer.color}} ;" target="_blank" href="{{ streamer.youtube }}"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.youtube }}"><i class="fab fa-youtube"></i></a></li>
                         {% endif %}
                         {% if streamer.discord %}
-                        <li><a class="nav-link px-2" style="color: {{streamer.color}} ;" target="_blank" href="{{ streamer.discord }}"><i class="fab fa-discord"></i></a></li>
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ streamer.discord }}"><i class="fab fa-discord"></i></a></li>
                         {% endif %}
                     </div>
+
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+
+    <div class="titre">
+        <hr class="bar-left" color=#F03C3C>
+        <h1>LES INTERVENANTS</h1>
+        <hr class="bar-right" color=#F03C3C>
+    </div>
+
+    <div class="container">
+        {% for intervenant in intervenants %}
+        <div class="card" style="border-color: {{intervenant.color}} ;">
+            <div class="title" style="background-color: {{intervenant.color}} ;">
+                <h2>{{ intervenant.name }}</h2>
+            </div>
+            <div class="box">
+                <div class="circle" style="background-image: url({{ intervenant.pp.url }});background-size: 100%;"></div>
+                <div class="right">
+                    <div class="box-skill">
+                        <div class="skill">
+                            <h3>{{ intervenant.skill1 }}</h3>
+                            <h4 style="color: {{intervenant.color}}">{{ intervenant.pourcent1 }}</h4>
+                        </div>
+                        <div class="skill">
+                            <h3>{{ intervenant.skill2 }}</h3>
+                            <h4 style="color: {{intervenant.color}}">{{ intervenant.pourcent2 }}</h4>
+                        </div>
+                        <div class="skill">
+                            <h3>{{ intervenant.skill3 }}</h3>
+                            <h4 style="color: {{intervenant.color}} ">{{ intervenant.pourcent3 }}</h4>
+                        </div>
+                    </div>
+                    <style>
+                        .{{intervenant.name}}{{intervenant.id}} li a{
+                            color: white; 
+                        }
+
+                        .{{intervenant.name}}{{intervenant.id}} li a:hover{
+                            color: {{intervenant.color}}; 
+                        }
+                    </style>
+                    <div class="social {{intervenant.name}}{{intervenant.id}}">
+                        {% if intervenant.twitch %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ intervenant.twitch }}"><i class="fab fa-twitch"></i></a></li>
+                        {% endif %}
+                        {% if intervenant.twitter %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ intervenant.twitter }}"><i class="fab fa-twitter"></i></a></li>
+                        {% endif %}
+                        {% if intervenant.instagram %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ intervenant.instagram }}"><i class="fab fa-instagram"></i></a></li>
+                        {% endif %}
+                        {% if intervenant.tiktok %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ intervenant.tiktok }}"><i class="fab fa-tiktok"></i></a></li>
+                        {% endif %}
+                        {% if intervenant.youtube %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ intervenant.youtube }}"><i class="fab fa-youtube"></i></a></li>
+                        {% endif %}
+                        {% if intervenant.discord %}
+                        <li><a class="nav-link px-2"  target="_blank" href="{{ intervenant.discord }}"><i class="fab fa-discord"></i></a></li>
+                        {% endif %}
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -92,7 +167,16 @@
                             <h4 style="color: {{equipe.color}} ;">{{ equipe.pourcent3 }}</h4>
                         </div>
                     </div>
-                    <div class="social">
+                    <style>
+                        .{{equipe.name}}{{equipe.id}} li a{
+                            color: white; 
+                        }
+
+                        .{{equipe.name}}{{equipe.id}} li a:hover{
+                            color: {{equipe.color}}; 
+                        }
+                    </style>
+                    <div class="social {{equipe.name}}{{equipe.id}}">
                         {% if equipe.twitch %}
                         <li><a class="nav-link px-2" style="color: {{equipe.color}} ;" target="_blank" href="{{ equipe.twitch }}"><i class="fab fa-twitch"></i></a></li>
                         {% endif %}
@@ -100,7 +184,7 @@
                         <li><a class="nav-link px-2" style="color: {{equipe.color}} ;" target="_blank" href="{{ equipe.twitter }}"><i class="fab fa-twitter"></i></a></li>
                         {% endif %}
                         {% if equipe.instagram %}
-                        <li><a class="nav-link px-2" style="color: {{equipe.color}} ;" target="_blank" href="{{ equipe.instagram }}"><i class="fab fa-instagram"></i></a></li>
+                        <li><a class="nav-link px-2" style=":hover {color: {{equipe.color}}} ;" target="_blank" href="{{ equipe.instagram }}"><i class="fab fa-instagram"></i></a></li>
                         {% endif %}
                         {% if equipe.tiktok %}
                         <li><a class="nav-link px-2" style="color: {{equipe.color}} ;" target="_blank" href="{{ equipe.tiktok }}"><i class="fab fa-tiktok"></i></a></li>
@@ -118,5 +202,6 @@
         {% endfor %}
     </div>
 </content>
+
 
 {% endblock %}

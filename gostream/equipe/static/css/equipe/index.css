@@ -64,7 +64,7 @@ content{
   margin: 2em;
   background:  #333333;
   border-radius: 10px;
-  border: 2px #F03C3C solid;
+  border: 2px solid;
   display: flex;
   flex-direction: column;
   transition: 0.5s;
@@ -141,7 +141,6 @@ content{
 }
 
 .container .card .box .right .social li a{
-  color: #FFFFFF;
   font-size: 1.3em;
 }
 
