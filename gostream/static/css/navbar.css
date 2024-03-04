@@ -174,7 +174,7 @@ nav.opened .btn-hamburger span:nth-child(3) {
     align-items: center;
     transition: bottom .5s ease-in-out;
     overflow: hidden;
-    background: #111111;
+    background: #000000;
     border-bottom: solid 2px #F03C3C;
   }
 
