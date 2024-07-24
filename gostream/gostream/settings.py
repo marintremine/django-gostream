@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-0a+kvqz57o*6b)a7+qawx7-u7ie#g5l&0jtx11%uo#qf_3k@xa
 DEBUG = True
 
 
-ALLOWED_HOSTS = ['gostreamfr.pythonanywhere.com','127.0.0.1']
+ALLOWED_HOSTS = ['gostreamfr.pythonanywhere.com','127.0.0.1','www.gostream.fr']
 
 
 # Application definition
@@ -127,7 +127,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = "static/"
-STATIC_ROOT = BASE_DIR 
+STATIC_ROOT = BASE_DIR
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
