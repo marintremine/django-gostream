@@ -12,6 +12,7 @@ class Streamer(models.Model):
     instagram = models.CharField(max_length=256,blank = True)
     tiktok = models.CharField(max_length=256,blank = True)
     discord = models.CharField(max_length=256,blank = True)
+    facebook = models.CharField(max_length=256,blank = True)
     other = models.CharField(max_length=256,blank = True)
 
     pp = models.ImageField(upload_to='streamers', blank = True, null= True)
@@ -34,6 +35,7 @@ class Intervenant(models.Model):
     instagram = models.CharField(max_length=256,blank = True)
     tiktok = models.CharField(max_length=256,blank = True)
     discord = models.CharField(max_length=256,blank = True)
+    facebook = models.CharField(max_length=256,blank = True)
     other = models.CharField(max_length=256,blank = True)
 
     pp = models.ImageField(upload_to='streamers', blank = True, null= True)
@@ -58,6 +60,7 @@ class Equipe(models.Model):
     instagram = models.CharField(max_length=256,blank = True)
     tiktok = models.CharField(max_length=256,blank = True)
     discord = models.CharField(max_length=256,blank = True)
+    facebook = models.CharField(max_length=256,blank = True)
     other = models.CharField(max_length=256,blank = True)
 
     pp = models.ImageField(upload_to='equipes', blank = True, null= True)

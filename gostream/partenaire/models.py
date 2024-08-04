@@ -12,6 +12,7 @@ class Partenaire(models.Model):
     instagram = models.CharField(max_length=256,blank = True)
     tiktok = models.CharField(max_length=256,blank = True)
     discord = models.CharField(max_length=256,blank = True)
+    facebook = models.CharField(max_length=256,blank = True)
     other = models.CharField(max_length=256,blank = True)
 
     def __str__(self) -> str:

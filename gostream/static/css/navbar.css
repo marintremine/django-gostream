@@ -3,11 +3,16 @@
     src: url('Klavika_Bold.otf');
 }
 
+@font-face {
+  font-family: 'MadeCarving';
+  src: url('MadeCarving_Bold.otf');
+}
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Klavika';
+  font-family: 'MadeCarving';
 }
 
 nav

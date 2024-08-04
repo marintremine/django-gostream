@@ -14,6 +14,7 @@ def accueil(request):
 
     client = twitch.TwitchHelix(client_id='04f1as1dvnnv3hohrbzeaumxt2xy88', client_secret='v60u7ayx6bvfawy9r3mzmq5hv67dn3', scopes=[twitch.constants.OAUTH_SCOPE_ANALYTICS_READ_EXTENSIONS])
     client.get_oauth()
+    print(liste_chaine_twitch)
     stream = client.get_streams(user_logins=liste_chaine_twitch)
     stream = list(stream).copy()
     rendu = {'title':"C'est désert pour le moment...",'game_name':'Check le planning !','viewer_count':'∞'}
